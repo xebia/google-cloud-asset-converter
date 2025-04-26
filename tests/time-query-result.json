@@ -1,0 +1,33 @@
+{
+  "done": true,
+  "jobReference": "CiBqb2JfalMtdFY0QjdUZmRPVEhRTjRKOHp1TG4wNl9mORIBDRi4qdbK5vbE1e4B",
+  "queryResult": {
+    "nextPageToken": "",
+    "rows": [
+      {
+        "f": [
+          {
+            "v": "12:07:35.919282"
+          }
+        ]
+      },
+      {
+        "f": [
+          {
+            "v": "00:08:29.564838"
+          }
+        ]
+      }
+    ],
+    "schema": {
+      "fields": [
+        {
+          "field": "time",
+          "mode": "NULLABLE",
+          "type": "TIME"
+        }
+      ]
+    },
+    "totalRows": "2"
+  }
+}

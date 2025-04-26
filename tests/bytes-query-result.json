@@ -1,0 +1,33 @@
+{
+  "done": true,
+  "jobReference": "CiBqb2JfelZNYVp2cHl3U1pXYlVtR21sc203SnlZb0w3VBIBDRi-_5C8sr7v91g",
+  "queryResult": {
+    "nextPageToken": "",
+    "rows": [
+      {
+        "f": [
+          {
+            "v": "AAAAAAAAAAE="
+          }
+        ]
+      },
+      {
+        "f": [
+          {
+            "v": "AAAAAAAAAAE="
+          }
+        ]
+      }
+    ],
+    "schema": {
+      "fields": [
+        {
+          "field": "bytes",
+          "mode": "NULLABLE",
+          "type": "BYTES"
+        }
+      ]
+    },
+    "totalRows": "2"
+  }
+}

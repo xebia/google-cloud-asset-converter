@@ -1,0 +1,33 @@
+{
+  "done": true,
+  "jobReference": "CiBqb2JfNHl6RlNCdnFhcVBpNU9IN2tKYnB0TlhjT2huNxIBDRjr_8Cn4uW48OIB",
+  "queryResult": {
+    "nextPageToken": "",
+    "rows": [
+      {
+        "f": [
+          {
+            "v": "2025-02-12"
+          }
+        ]
+      },
+      {
+        "f": [
+          {
+            "v": "2025-01-10"
+          }
+        ]
+      }
+    ],
+    "schema": {
+      "fields": [
+        {
+          "field": "date",
+          "mode": "NULLABLE",
+          "type": "DATE"
+        }
+      ]
+    },
+    "totalRows": "2"
+  }
+}
