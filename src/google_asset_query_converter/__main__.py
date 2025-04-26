@@ -20,8 +20,12 @@ def main():
        google-asset-query-converter
 
     """
-    parser = argparse.ArgumentParser(description="Convert Google Asset Query results to JSON")
-    parser.add_argument("--pretty-print", action="store_true", help="Pretty print the JSON output")
+    parser = argparse.ArgumentParser(
+        description="Convert Google Asset Query results to JSON"
+    )
+    parser.add_argument(
+        "--pretty-print", action="store_true", help="Pretty print the JSON output"
+    )
     args = parser.parse_args()
 
     convert = JSONConverter()

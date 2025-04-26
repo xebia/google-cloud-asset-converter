@@ -45,6 +45,7 @@ JSON_NATIVE_CONVERTERS: Dict[TypeEnum, Callable[[str], Optional[Any]]] = {
     TypeEnum.JSON: lambda v: json.loads(v) if v else None,
 }
 
+
 class Converter:
     """
     Converts Cloud Asset Query results to Python native types.
@@ -138,6 +139,7 @@ class PythonConverter(Converter):
     """
     converts Cloud Asset Query results to Python native types.
     """
+
     def __init__(self):
         super().__init__(PYTHON_NATIVE_CONVERTERS)
 
@@ -146,5 +148,6 @@ class JSONConverter(Converter):
     """
     converts Cloud Asset Query results to JSON native types.
     """
+
     def __init__(self):
         super().__init__(JSON_NATIVE_CONVERTERS)

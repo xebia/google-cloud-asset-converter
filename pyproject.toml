@@ -1,13 +1,15 @@
 [build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools", "wheel", "setuptools-scm"]
 
 [tool.setuptools_scm]
-version_scheme = "post-release"
+write_to = "src/google_asset_query_converter/version.py"
+
 
 [project]
 name = "gcloud-asset-query-converter"
 description = "Convert Google Cloud Assets query results to JSON format."
+dynamic = ["version"]
 readme = "README.md"
 
 keywords = [
@@ -17,18 +19,19 @@ keywords = [
   "json",
   "query",
 ]
-license.file = "LICENSE"
+
+license-files = ["LICENSE"]
+
 authors = [
   { name = "Mark van Holsteijn", email = "mvanholsteijn@xebia.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 
 classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
 ]
 
 dependencies = [
@@ -48,9 +51,8 @@ where = [ "src" ]
 column_width = 120
 indent = 2
 keep_full_version = false
-min_python_version = "3.12"
+min_python_version = "3.10"
 
 
 [urls]
-homepage = "https://github.com/xebia/gcloud-asset-query-converter"
 repository = "https://github.com/xebia/gcloud-asset-query-converter"
