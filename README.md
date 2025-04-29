@@ -148,7 +148,7 @@ def print_metadata(project:str):
 To install this utility library, type:
 
 ```shell
-pip install git+https://github.com/xebia/google-asset-query-converter.git@0.0.2
+pip install git+https://github.com/xebia/google-asset-query-converter.git@0.0.3
 ```
 
 It required Python 3.12 or later.
