@@ -48,7 +48,7 @@ JSON_NATIVE_CONVERTERS: Dict[TypeEnum, Callable[[str], Optional[Any]]] = {
 
 class Converter:
     """
-    Converts Cloud Asset Query results to Python native types.
+    Converts Cloud Asset Query result to a Python object.
     """
 
     _converters: Dict[TypeEnum, Callable[[str], Optional[Any]]]
@@ -58,15 +58,9 @@ class Converter:
         converters: Optional[Dict[TypeEnum, Callable[[str], Optional[Any]]]] = None,
     ):
         """
-        Initializes the converters with a converter for specified field types. If no converter is given,
-        for a specified type, the value will be returned as is.
-
-        If no converters are given, the default `PYTHON_NATIVE_CONVERTERS` will be used. To
-        serialize to JSON, use `JSON_NATIVE_CONVERTERS` instead. To maintain all string values
-        specify an empty dictionary.
-
+        initialize the converter. By default, values are not converted and returned as is.
         """
-        self._converters = converters if converters else PYTHON_NATIVE_CONVERTERS
+        self._converters = converters
 
     @property
     def converters(self) -> Dict[TypeEnum, Callable[[str], Optional[Any]]]:
@@ -137,7 +131,7 @@ class Converter:
 
 class PythonConverter(Converter):
     """
-    converts Cloud Asset Query results to Python native types.
+    converts Cloud Asset Query result to Python object with values converted to Python native types.
     """
 
     def __init__(self):
@@ -146,7 +140,7 @@ class PythonConverter(Converter):
 
 class JSONConverter(Converter):
     """
-    converts Cloud Asset Query results to JSON native types.
+    converts Cloud Asset Query result to Python object with values converted to JSON native types.
     """
 
     def __init__(self):

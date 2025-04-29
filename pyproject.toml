@@ -13,38 +13,43 @@ dynamic = ["version"]
 readme = "README.md"
 
 keywords = [
-  "asset",
-  "converter",
-  "gcloud",
-  "json",
-  "query",
+    "asset",
+    "converter",
+    "gcloud",
+    "json",
+    "query",
 ]
 
 license = "Apache-2.0"
 
 authors = [
-  { name = "Mark van Holsteijn", email = "mvanholsteijn@xebia.com" },
+    { name = "Mark van Holsteijn", email = "mvanholsteijn@xebia.com" },
 ]
 requires-python = ">=3.12"
 
 classifiers = [
-  "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
 ]
 
 dependencies = [
-  "google-cloud-asset",
-  "pydantic",
+    "google-cloud-asset",
+    "pydantic",
 ]
 optional-dependencies.dev = [
-  "pyproject-fmt",
-  "pytest",
-  "pytest-cov",
+    "pyproject-fmt",
+    "pytest",
+    "pytest-cov",
+    "pytest-integration",
+    "gcloud-config-helper",
 ]
 
 [tool.setuptools.packages.find]
-where = [ "src" ]
+where = ["src"]
+
+[project.scripts]
+google-asset-query-converter = "google_asset_query_converter.__main__:main"
 
 [tool.pyproject-fmt]
 column_width = 120
